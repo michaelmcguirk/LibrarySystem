@@ -1,0 +1,30 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body bgcolor="#0A0A33">
+<?php
+
+if(isset($_SESSION['Username']))
+{
+	$uname = $_SESSION['Username'];
+	echo "You are currently logged in as: " . $uname. " <a href='logout.php' >(Logout?)</a> </br>";
+	echo "<a href='userhome.php'>Home</a>";
+	
+}
+Else
+{
+	echo "<a href='index.php'>Login</a>";
+}
+?>
+<h1 align="center">Library Reservation System</h1>
+
+</body>
+</html>
